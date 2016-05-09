@@ -1,3 +1,4 @@
+var glob = require('glob');
 var gulp = require('gulp');
 var typescript = require('gulp-typescript');
 var browserify = require('browserify');
@@ -16,7 +17,7 @@ gulp.task('ts', function() {
 
 gulp.task('build', ["ts"], function(){
   var b = browserify({
-    entries: './tmp/index.js',
+    entries: glob.sync('./tmp/**/*.js'),
     debug: false,
   });
   return b.bundle()

@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "browserify": "^13.0.1",
+    "glob": "^7.0.3",
     "gulp": "^3.9.1",
     "gulp-typescript": "^2.13.0",
     "redux-devtools": "^3.2.0",
