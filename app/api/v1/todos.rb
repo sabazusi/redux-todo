@@ -16,7 +16,7 @@ module V1
         optional :limit, type: Integer, default: 5
       end
       get ':year/:month' do
-        return params[:month]
+        Todo.my_month(params[:month], year: params[:year])
       end
     end
   end
