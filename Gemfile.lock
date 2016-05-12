@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/radar/by_star
+  revision: be22e8179daa820f1292275b9ff2789f7aeda031
+  specs:
+    by_star (2.2.1)
+      activesupport
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -175,6 +182,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  by_star!
   byebug
   coffee-rails (~> 4.1.0)
   grape
