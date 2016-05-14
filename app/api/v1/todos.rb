@@ -21,6 +21,24 @@ module V1
           .by_month(params[:month], year: params[:year])
           .order("date ASC").offset(params[:offset]).limit(params[:limit])
       end
+
+      desc "register new todo."
+      params do
+        requires :year, type: Integer
+        requires :month, type: Integer
+        requires :day, type: Integer
+        requires :title, type: String
+        requires :body, type: String
+      end
+      post 'new' do
+        date = Date.new(params[:year], params[:month], params[:day])
+        todo = Todo.new({
+                 title: params[:title],
+                 body: params[:body],
+                 date: date
+               })
+        todo.save
+      end
     end
   end
 end
